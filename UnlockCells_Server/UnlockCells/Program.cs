@@ -4,28 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using UnlockCells;
 
-public class Program
+namespace UnlockCells
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        IHost host = CreateHostBuilder(args).Build();
-        using (var scope = host.Services.CreateScope())
+        public static void Main(string[] args)
         {
-            // Retrieve your DbContext isntance here
-            var dbContext = scope.ServiceProvider.GetService<AppDbContext>();
-           // DbInitializer.Seed(dbContext);
+            CreateHostBuilder(args).Build().Run();
         }
 
-        host.Run();
-
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
-    public static IHostBuilder CreateHostBuilder(string[] args)
-    => Host.CreateDefaultBuilder(args)
-        .ConfigureWebHostDefaults(
-            webBuilder => webBuilder.UseStartup<Startup>());
 }
