@@ -1,37 +1,27 @@
-﻿using System;
+﻿using UnlockCells.Models;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using UnlockCells.Models;
 
 namespace UnlockCells.Controllers
 {
-    public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
+	public class HomeController : Controller
+	{
+		// GET: Home
+		public ActionResult Index()
+		{
+			List<DataPoint> dataPoints = new List<DataPoint>();
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+			dataPoints.Add(new DataPoint("User1", 25));   // momentan sunt hard codate, dar le vom modifica in asa fel incat sa ia userii din baza de date
+			dataPoints.Add(new DataPoint("User2", 13));
+			dataPoints.Add(new DataPoint("User3", 8));
+			dataPoints.Add(new DataPoint("User4", 7));
+			dataPoints.Add(new DataPoint("User5", 6.8));
+			dataPoints.Add(new DataPoint("User6", 40.2));
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+			ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
+			return View();
+		}
+	}
 }

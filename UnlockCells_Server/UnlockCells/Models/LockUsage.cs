@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace UnlockCells.Models
 {
-    public class User_RFID
+    public class LockUsage
     {
-        public int Id { get; set; }
-
-        public string RFID_Id { get; set; }
+        public User User { get; set;}
+        public DateTime UseLockTime { get; set; }
+        
     }
 }
