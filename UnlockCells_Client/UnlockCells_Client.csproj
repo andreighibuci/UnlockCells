@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>dotnet-UnlockCells_Client-8188F054-C166-46C9-A7A4-8816DC784898</UserSecretsId>
+    <UserSecretsId>dotnet-UnlockCells_Service-80C352D5-4FF1-4A2A-A4FD-2B0CBBFEAC6A</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.2" />
+    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="16.6.1" />
+    <PackageReference Include="System.IO.Ports" Version="4.7.0" />
   </ItemGroup>
 </Project>

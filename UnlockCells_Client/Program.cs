@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace UnlockCells_Client
+namespace UnlockCells_Service
 {
     public class Program
     {

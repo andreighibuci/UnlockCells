@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Client\\UnlockCells_Client.csproj": {}
+    "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Service\\UnlockCells_Service\\UnlockCells_Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Client\\UnlockCells_Client.csproj": {
+    "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Service\\UnlockCells_Service\\UnlockCells_Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Client\\UnlockCells_Client.csproj",
+        "projectUniqueName": "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Service\\UnlockCells_Service\\UnlockCells_Client.csproj",
         "projectName": "UnlockCells_Client",
-        "projectPath": "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Client\\UnlockCells_Client.csproj",
+        "projectPath": "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Service\\UnlockCells_Service\\UnlockCells_Client.csproj",
         "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Client\\obj\\",
+        "outputPath": "C:\\Users\\Andrei\\source\\repos\\UnlockCells_Service\\UnlockCells_Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,7 +40,15 @@
           "dependencies": {
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.TestPlatform.TestHost": {
+              "target": "Package",
+              "version": "[16.6.1, )"
+            },
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             }
           },
           "imports": [
@@ -58,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
